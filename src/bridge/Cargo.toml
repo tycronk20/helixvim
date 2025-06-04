@@ -1,0 +1,13 @@
+[package]
+name = "helixvim_bridge"
+version = "0.1.0"
+edition = "2021"
+authors = ["HelixVim Contributors"]
+description = "Bridge between Helix and MacVim"
+
+[dependencies]
+libc = "0.2"
+
+[lib]
+name = "helixvim_bridge"
+crate-type = ["staticlib", "cdylib"]

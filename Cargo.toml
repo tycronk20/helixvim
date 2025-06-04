@@ -1,0 +1,49 @@
+[package]
+name = "helixvim"
+version = "0.1.0"
+edition = "2021"
+authors = ["HelixVim Contributors"]
+description = "Native macOS application for the Helix editor"
+repository = "https://github.com/tycronk20/helixvim"
+license = "MIT"
+
+[dependencies]
+# Helix core
+helix-core = "0.6.0"
+helix-view = "0.6.0"
+helix-term = "0.6.0"
+
+# macOS integration
+cocoa = "0.24.1"
+objc = "0.2.7"
+core-foundation = "0.9.3"
+core-graphics = "0.22.3"
+
+# UI and rendering
+wgpu = "0.15"
+winit = "0.28"
+raw-window-handle = "0.5"
+
+# Utilities
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.7"
+clap = { version = "4.2", features = ["derive"] }
+
+[build-dependencies]
+cargo-bundle = "0.6.0"
+
+[package.metadata.bundle]
+name = "HelixVim"
+identifier = "com.helixvim.app"
+icon = ["assets/helixvim.icns"]
+version = "0.1.0"
+copyright = "Copyright (c) 2025 HelixVim Contributors"
+category = "public.app-category.developer-tools"
+short_description = "Native macOS application for the Helix editor"
+long_description = """
+HelixVim is a native macOS application that provides the Helix editing experience
+with deep macOS integration, built entirely in Rust.
+"""
