@@ -76,6 +76,11 @@ just bundle     # Create macOS app bundle
 just dmg        # Create distributable DMG
 ```
 
+## Development
+
+The roadmap for replacing Vim with Helix is documented in
+[HELIX_INTEGRATION.md](docs/HELIX_INTEGRATION.md).
+
 ## Configuration
 
 MacHelix uses Helix's configuration format with additional macOS-specific options. See [CONFIG.md](docs/CONFIG.md) for details.

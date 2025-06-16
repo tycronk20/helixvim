@@ -11,8 +11,13 @@ use anyhow::Result;
 /// Run the application
 pub fn run() -> Result<()> {
     println!("MacHelix starting up...");
-    
+    // Initialize macOS bridge
+    crate::bridge::init()?;
+
+    // Create the editor instance
+    let _editor = crate::editor::Editor::new()?;
+
     // TODO: Initialize window and event loop
-    
+
     Ok(())
 }

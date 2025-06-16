@@ -2,8 +2,8 @@
 //!
 //! This module integrates with Helix's core editing functionality.
 
-pub mod state;
 pub mod commands;
+pub mod state;
 
 use anyhow::Result;
 use helix_core::syntax::Syntax;
@@ -19,28 +19,30 @@ pub struct Editor {
 impl Editor {
     /// Create a new editor instance
     pub fn new() -> Result<Self> {
-        // TODO: Initialize Helix editor
-        unimplemented!()
+        // Initialize the Helix editor with default configuration
+        let helix = HelixEditor::new();
+
+        Ok(Self { helix })
     }
-    
+
     /// Open a file in the editor
     pub fn open(&mut self, path: &str) -> Result<()> {
         // TODO: Open file in Helix
         Ok(())
     }
-    
+
     /// Save the current file
     pub fn save(&mut self) -> Result<()> {
         // TODO: Save current file
         Ok(())
     }
-    
+
     /// Execute a Helix command
     pub fn execute_command(&mut self, command: &str) -> Result<()> {
         // TODO: Execute command in Helix
         Ok(())
     }
-    
+
     /// Get the current syntax highlighting
     pub fn syntax(&self) -> Option<&Syntax> {
         // TODO: Get current syntax
