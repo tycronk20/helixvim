@@ -1,4 +1,4 @@
-//! Clipboard integration for HelixVim
+//! Clipboard integration for MacHelix
 //!
 //! This module provides integration with the macOS clipboard.
 

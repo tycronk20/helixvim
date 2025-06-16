@@ -1,4 +1,4 @@
-//! macOS bridge module for HelixVim
+//! macOS bridge module for MacHelix
 //!
 //! This module provides integration with macOS Cocoa APIs.
 

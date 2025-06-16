@@ -1,4 +1,4 @@
-//! Editor commands for HelixVim
+//! Editor commands for MacHelix
 //!
 //! This module defines commands that can be executed in the editor.
 

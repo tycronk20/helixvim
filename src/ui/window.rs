@@ -1,4 +1,4 @@
-//! Window management for HelixVim
+//! Window management for MacHelix
 //!
 //! This module handles window creation and management.
 
@@ -12,7 +12,7 @@ pub fn create_window(config: &WindowConfig) -> Result<(Window, EventLoop<()>)> {
     let event_loop = EventLoop::new();
     
     let window = WindowBuilder::new()
-        .with_title("HelixVim")
+        .with_title("MacHelix")
         .with_inner_size(winit::dpi::LogicalSize::new(
             config.default_width,
             config.default_height,

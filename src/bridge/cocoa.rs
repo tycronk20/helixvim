@@ -1,4 +1,4 @@
-//! Cocoa integration for HelixVim
+//! Cocoa integration for MacHelix
 //!
 //! This module provides low-level integration with Cocoa APIs.
 

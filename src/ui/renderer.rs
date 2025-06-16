@@ -1,4 +1,4 @@
-//! GPU-accelerated renderer for HelixVim
+//! GPU-accelerated renderer for MacHelix
 //!
 //! This module handles rendering text and UI elements using wgpu.
 
@@ -6,7 +6,7 @@ use anyhow::Result;
 use wgpu::{Device, Queue, Surface};
 use crate::config::RenderingConfig;
 
-/// Renderer for HelixVim
+/// Renderer for MacHelix
 pub struct Renderer {
     device: Device,
     queue: Queue,

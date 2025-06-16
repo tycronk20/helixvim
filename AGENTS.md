@@ -1,7 +1,7 @@
-# AGENTS.md – HelixVim
+# AGENTS.md – MacHelix
 
 ## Purpose
-HelixVim is a native macOS application that provides the Helix editing experience with deep macOS integration. Built entirely in Rust, it combines Helix's modern editing capabilities with a native macOS user interface, offering the best of both worlds without modifying MacVim.
+MacHelix is a native macOS application that provides the Helix editing experience with deep macOS integration. Built entirely in Rust, it combines Helix's modern editing capabilities with a native macOS user interface, offering the best of both worlds without modifying MacVim.
 
 ## Directory Map
 | Path | Description |
@@ -23,7 +23,7 @@ brew bundle  # Brewfile in repo root
 ./scripts/bootstrap.sh  # Set up dependencies and Helix
 
 # Full release build (using just)
-just build  # Builds HelixVim with all optimizations
+just build  # Builds MacHelix with all optimizations
 
 # Development build
 just run  # Builds and runs in development mode
@@ -76,7 +76,7 @@ just fmt  # Applies rustfmt to all files
 
 - **Commit Messages**:
   - Use Conventional Commits format (feat:, fix:, docs:, etc.)
-  - Begin PR titles with "HelixVim:" followed by a concise description
+  - Begin PR titles with "MacHelix:" followed by a concise description
   - Include "Fixes #123" when addressing specific issues
 
 ## Safe-Run Guidelines
@@ -123,7 +123,7 @@ just fmt  # Applies rustfmt to all files
 4. Test the DMG on a clean macOS system
 
 ## Architecture Overview
-HelixVim is built as a native Rust application with the following components:
+MacHelix is built as a native Rust application with the following components:
 
 1. **Helix Core**: Provides the editing engine and text manipulation
 2. **macOS Bridge**: Native Cocoa integration via Rust bindings

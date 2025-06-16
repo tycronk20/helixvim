@@ -1,4 +1,4 @@
-//! Application module for HelixVim
+//! Application module for MacHelix
 //!
 //! This module handles the macOS application lifecycle and window management.
 
@@ -10,7 +10,7 @@ use anyhow::Result;
 
 /// Run the application
 pub fn run() -> Result<()> {
-    println!("HelixVim starting up...");
+    println!("MacHelix starting up...");
     
     // TODO: Initialize window and event loop
     

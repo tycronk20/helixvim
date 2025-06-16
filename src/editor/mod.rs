@@ -1,4 +1,4 @@
-//! Editor module for HelixVim
+//! Editor module for MacHelix
 //!
 //! This module integrates with Helix's core editing functionality.
 
@@ -9,11 +9,11 @@ use anyhow::Result;
 use helix_core::syntax::Syntax;
 use helix_view::editor::Editor as HelixEditor;
 
-/// HelixVim editor wrapper
+/// MacHelix editor wrapper
 pub struct Editor {
     /// The underlying Helix editor instance
     helix: HelixEditor,
-    // Additional state specific to HelixVim
+    // Additional state specific to MacHelix
 }
 
 impl Editor {

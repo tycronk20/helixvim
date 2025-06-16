@@ -1,4 +1,4 @@
-//! Configuration module for HelixVim
+//! Configuration module for MacHelix
 //!
 //! This module handles loading and saving configuration.
 
@@ -6,7 +6,7 @@ use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use std::path::Path;
 
-/// HelixVim configuration
+/// MacHelix configuration
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Config {
     /// macOS integration options
@@ -257,6 +257,6 @@ impl Config {
     /// Get default configuration path
     pub fn default_path() -> Result<std::path::PathBuf> {
         let home = dirs::home_dir().ok_or_else(|| anyhow::anyhow!("Could not find home directory"))?;
-        Ok(home.join(".config").join("helixvim").join("config.toml"))
+        Ok(home.join(".config").join("machelix").join("config.toml"))
     }
 }
