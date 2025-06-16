@@ -1,12 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-# Script to run tests for HelixVim
+# Script to run tests for MacHelix
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPO_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
 
-echo "==> Running HelixVim tests..."
+echo "==> Running MacHelix tests..."
 
 # Check if we need to bootstrap first
 if [ ! -f "$REPO_ROOT/Cargo.toml" ]; then

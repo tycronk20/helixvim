@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMHelixBridge : NSObject
 
-/// Returns the HelixVim version string
+/// Returns the MacHelix version string
 + (NSString *)version;
 
 /// Initialize the Helix editor

@@ -1,4 +1,4 @@
-//! File dialog integration for HelixVim
+//! File dialog integration for MacHelix
 //!
 //! This module provides integration with macOS file dialogs.
 

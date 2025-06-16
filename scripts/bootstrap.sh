@@ -1,12 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-# Script to bootstrap the HelixVim development environment
+# Script to bootstrap the MacHelix development environment
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPO_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
 
-echo "==> Setting up HelixVim development environment..."
+echo "==> Setting up MacHelix development environment..."
 
 # Check for Homebrew
 if ! command -v brew &> /dev/null; then
@@ -65,7 +65,7 @@ fi
 if [ ! -f "$REPO_ROOT/Justfile" ]; then
     echo "==> Creating Justfile..."
     cat > "$REPO_ROOT/Justfile" << EOF
-# HelixVim Justfile
+# MacHelix Justfile
 
 default:
     @just --list
@@ -105,16 +105,16 @@ clippy:
 # Create DMG for distribution
 dmg: bundle
     create-dmg \\
-        --volname "HelixVim" \\
-        --volicon "assets/helixvim.icns" \\
+        --volname "MacHelix" \\
+        --volicon "assets/machelix.icns" \\
         --window-pos 200 120 \\
         --window-size 800 400 \\
         --icon-size 100 \\
-        --icon "HelixVim.app" 200 190 \\
-        --hide-extension "HelixVim.app" \\
+        --icon "MacHelix.app" 200 190 \\
+        --hide-extension "MacHelix.app" \\
         --app-drop-link 600 185 \\
-        "HelixVim.dmg" \\
-        "target/release/bundle/osx/HelixVim.app"
+        "MacHelix.dmg" \\
+        "target/release/bundle/osx/MacHelix.app"
 
 # Watch for changes and run
 watch:
@@ -131,12 +131,12 @@ if [ ! -f "$REPO_ROOT/Cargo.toml" ]; then
     echo "==> Creating Cargo.toml..."
     cat > "$REPO_ROOT/Cargo.toml" << EOF
 [package]
-name = "helixvim"
+name = "machelix"
 version = "0.1.0"
 edition = "2021"
-authors = ["HelixVim Contributors"]
+authors = ["MacHelix Contributors"]
 description = "Native macOS application for the Helix editor"
-repository = "https://github.com/tycronk20/helixvim"
+repository = "https://github.com/tycronk20/machelix"
 license = "MIT"
 
 [dependencies]
@@ -168,15 +168,15 @@ clap = { version = "4.2", features = ["derive"] }
 cargo-bundle = "0.6.0"
 
 [package.metadata.bundle]
-name = "HelixVim"
-identifier = "com.helixvim.app"
-icon = ["assets/helixvim.icns"]
+name = "MacHelix"
+identifier = "com.machelix.app"
+icon = ["assets/machelix.icns"]
 version = "0.1.0"
-copyright = "Copyright (c) 2025 HelixVim Contributors"
+copyright = "Copyright (c) 2025 MacHelix Contributors"
 category = "public.app-category.developer-tools"
 short_description = "Native macOS application for the Helix editor"
 long_description = """
-HelixVim is a native macOS application that provides the Helix editing experience
+MacHelix is a native macOS application that provides the Helix editing experience
 with deep macOS integration, built entirely in Rust.
 """
 EOF
@@ -187,9 +187,9 @@ if [ ! -f "$REPO_ROOT/src/main.rs" ]; then
     echo "==> Creating main.rs..."
     mkdir -p "$REPO_ROOT/src"
     cat > "$REPO_ROOT/src/main.rs" << EOF
-//! HelixVim - Native macOS application for the Helix editor
+//! MacHelix - Native macOS application for the Helix editor
 //!
-//! This is the main entry point for the HelixVim application.
+//! This is the main entry point for the MacHelix application.
 
 mod app;
 mod editor;
@@ -212,7 +212,7 @@ if [ ! -f "$REPO_ROOT/src/app/mod.rs" ]; then
     echo "==> Creating app module..."
     mkdir -p "$REPO_ROOT/src/app"
     cat > "$REPO_ROOT/src/app/mod.rs" << EOF
-//! Application module for HelixVim
+//! Application module for MacHelix
 //!
 //! This module handles the macOS application lifecycle and window management.
 
@@ -224,7 +224,7 @@ use anyhow::Result;
 
 /// Run the application
 pub fn run() -> Result<()> {
-    println!("HelixVim starting up...");
+    println!("MacHelix starting up...");
     
     // TODO: Initialize window and event loop
     
@@ -234,5 +234,5 @@ EOF
 fi
 
 echo "==> Bootstrap complete!"
-echo "You can now build HelixVim with: just build"
+echo "You can now build MacHelix with: just build"
 echo "Or run it with: just run"

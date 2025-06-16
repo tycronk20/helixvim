@@ -1,4 +1,4 @@
-# HelixVim Justfile
+# MacHelix Justfile
 
 default:
     @just --list
@@ -38,16 +38,16 @@ clippy:
 # Create DMG for distribution
 dmg: bundle
     create-dmg \
-        --volname "HelixVim" \
-        --volicon "assets/helixvim.icns" \
+        --volname "MacHelix" \
+        --volicon "assets/machelix.icns" \
         --window-pos 200 120 \
         --window-size 800 400 \
         --icon-size 100 \
-        --icon "HelixVim.app" 200 190 \
-        --hide-extension "HelixVim.app" \
+        --icon "MacHelix.app" 200 190 \
+        --hide-extension "MacHelix.app" \
         --app-drop-link 600 185 \
-        "HelixVim.dmg" \
-        "target/release/bundle/osx/HelixVim.app"
+        "MacHelix.dmg" \
+        "target/release/bundle/osx/MacHelix.app"
 
 # Watch for changes and run
 watch:

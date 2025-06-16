@@ -1,4 +1,4 @@
-//! macOS Services integration for HelixVim
+//! macOS Services integration for MacHelix
 //!
 //! This module handles integration with macOS Services menu.
 

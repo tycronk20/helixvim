@@ -8,10 +8,10 @@
 #import "MMHelixBridge.h"
 
 // Import the C functions from the Rust bridge
-extern const char* helixvim_version(void);
-extern bool helixvim_init(void);
-extern bool helixvim_process_key(const char* key);
-extern void helixvim_free_string(char* s);
+extern const char* machelix_version(void);
+extern bool machelix_init(void);
+extern bool machelix_process_key(const char* key);
+extern void machelix_free_string(char* s);
 
 @implementation MMHelixBridge
 
@@ -25,19 +25,19 @@ extern void helixvim_free_string(char* s);
 }
 
 + (NSString *)version {
-    const char *version = helixvim_version();
+    const char *version = machelix_version();
     NSString *versionString = [NSString stringWithUTF8String:version];
-    helixvim_free_string((char *)version);
+    machelix_free_string((char *)version);
     return versionString;
 }
 
 + (BOOL)initializeHelix {
-    return helixvim_init();
+    return machelix_init();
 }
 
 + (BOOL)processKey:(NSString *)key {
     const char *keyStr = [key UTF8String];
-    return helixvim_process_key(keyStr);
+    return machelix_process_key(keyStr);
 }
 
 @end

@@ -1,4 +1,4 @@
-//! Preferences window for HelixVim
+//! Preferences window for MacHelix
 //!
 //! This module handles the preferences window and settings UI.
 

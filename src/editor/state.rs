@@ -1,4 +1,4 @@
-//! Editor state management for HelixVim
+//! Editor state management for MacHelix
 //!
 //! This module handles the state of the editor, including document management.
 

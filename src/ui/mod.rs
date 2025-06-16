@@ -1,4 +1,4 @@
-//! UI module for HelixVim
+//! UI module for MacHelix
 //!
 //! This module handles the user interface rendering and interaction.
 

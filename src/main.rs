@@ -1,6 +1,6 @@
-//! HelixVim - Native macOS application for the Helix editor
+//! MacHelix - Native macOS application for the Helix editor
 //!
-//! This is the main entry point for the HelixVim application.
+//! This is the main entry point for the MacHelix application.
 
 mod app;
 mod editor;

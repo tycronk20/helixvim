@@ -1,10 +1,10 @@
 [package]
-name = "helixvim"
+name = "machelix"
 version = "0.1.0"
 edition = "2021"
-authors = ["HelixVim Contributors"]
+authors = ["MacHelix Contributors"]
 description = "Native macOS application for the Helix editor"
-repository = "https://github.com/tycronk20/helixvim"
+repository = "https://github.com/tycronk20/machelix"
 license = "MIT"
 
 [dependencies]
@@ -36,14 +36,14 @@ clap = { version = "4.2", features = ["derive"] }
 cargo-bundle = "0.6.0"
 
 [package.metadata.bundle]
-name = "HelixVim"
-identifier = "com.helixvim.app"
-icon = ["assets/helixvim.icns"]
+name = "MacHelix"
+identifier = "com.machelix.app"
+icon = ["assets/machelix.icns"]
 version = "0.1.0"
-copyright = "Copyright (c) 2025 HelixVim Contributors"
+copyright = "Copyright (c) 2025 MacHelix Contributors"
 category = "public.app-category.developer-tools"
 short_description = "Native macOS application for the Helix editor"
 long_description = """
-HelixVim is a native macOS application that provides the Helix editing experience
+MacHelix is a native macOS application that provides the Helix editing experience
 with deep macOS integration, built entirely in Rust.
 """

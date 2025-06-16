@@ -1,4 +1,4 @@
-//! HelixVim Bridge
+//! MacHelix Bridge
 //!
 //! This crate provides the bridge between Helix and MacVim's Objective-C code.
 //! It exposes Helix functionality through a C-compatible FFI interface.
@@ -6,24 +6,24 @@
 use std::ffi::{c_char, CStr, CString};
 use std::ptr;
 
-/// FFI interface for HelixVim
+/// FFI interface for MacHelix
 #[no_mangle]
-pub extern "C" fn helixvim_version() -> *const c_char {
-    let version = "HelixVim 0.1.0";
+pub extern "C" fn machelix_version() -> *const c_char {
+    let version = "MacHelix 0.1.0";
     let c_str = CString::new(version).unwrap();
     c_str.into_raw()
 }
 
 /// Initialize Helix editor
 #[no_mangle]
-pub extern "C" fn helixvim_init() -> bool {
+pub extern "C" fn machelix_init() -> bool {
     // TODO: Initialize Helix core
     true
 }
 
 /// Process a keystroke
 #[no_mangle]
-pub extern "C" fn helixvim_process_key(key: *const c_char) -> bool {
+pub extern "C" fn machelix_process_key(key: *const c_char) -> bool {
     if key.is_null() {
         return false;
     }
@@ -38,7 +38,7 @@ pub extern "C" fn helixvim_process_key(key: *const c_char) -> bool {
 
 /// Free a string allocated by this library
 #[no_mangle]
-pub extern "C" fn helixvim_free_string(s: *mut c_char) {
+pub extern "C" fn machelix_free_string(s: *mut c_char) {
     if !s.is_null() {
         unsafe {
             let _ = CString::from_raw(s);
@@ -52,11 +52,11 @@ mod tests {
     
     #[test]
     fn test_version() {
-        let version_ptr = helixvim_version();
+        let version_ptr = machelix_version();
         let version = unsafe { CStr::from_ptr(version_ptr) }.to_str().unwrap();
-        assert!(version.contains("HelixVim"));
+        assert!(version.contains("MacHelix"));
         
         // Clean up
-        helixvim_free_string(version_ptr as *mut c_char);
+        machelix_free_string(version_ptr as *mut c_char);
     }
 }

@@ -1,4 +1,4 @@
-//! Theme handling for HelixVim
+//! Theme handling for MacHelix
 //!
 //! This module handles loading and applying themes.
 

@@ -1,19 +1,19 @@
-# HelixVim Configuration
+# MacHelix Configuration
 
-HelixVim provides a native macOS experience for the Helix editor. This document describes how to configure HelixVim.
+MacHelix provides a native macOS experience for the Helix editor. This document describes how to configure MacHelix.
 
 ## Configuration Files
 
-HelixVim uses the following configuration files:
+MacHelix uses the following configuration files:
 
 - **Helix Configuration**: `~/.config/helix/config.toml` - Standard Helix configuration
-- **HelixVim Configuration**: `~/.config/helixvim/config.toml` - HelixVim-specific settings
+- **MacHelix Configuration**: `~/.config/machelix/config.toml` - MacHelix-specific settings
 
 ## Helix-Specific Options
 
 All standard Helix configuration options are supported. See the [Helix documentation](https://docs.helix-editor.com/configuration.html) for details.
 
-## HelixVim-Specific Options
+## MacHelix-Specific Options
 
 ### macOS Integration
 
@@ -78,7 +78,7 @@ normal = { ... }
 ```
 
 ```toml
-# ~/.config/helixvim/config.toml - HelixVim specific config
+# ~/.config/machelix/config.toml - MacHelix specific config
 [macos]
 native_menus = true
 native_tabs = true
@@ -105,11 +105,11 @@ toolbar_items = ["new", "open", "save", "undo", "redo"]
 
 ## Command Line Options
 
-HelixVim supports all standard Helix command line options, plus the following:
+MacHelix supports all standard Helix command line options, plus the following:
 
 ```
 USAGE:
-    helixvim [OPTIONS] [FILE]...
+    machelix [OPTIONS] [FILE]...
 
 OPTIONS:
     -h, --help                     Print help information

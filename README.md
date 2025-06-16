@@ -1,15 +1,15 @@
-Vim - the text editor - for macOS
+MacHelix - the Helix-based text editor for macOS
 
 
-- MacVim homepage: <https://macvim.org>
+- MacHelix homepage: <https://github.com/tycronk20/machelix>
 
-- Download the latest version from [Releases](https://github.com/macvim-dev/macvim/releases/latest)
+- Download the latest version from [Releases](https://github.com/tycronk20/machelix/releases/latest)
 
-- How to [build MacVim from source](https://github.com/macvim-dev/macvim/wiki/Building)
+- How to [build MacHelix from source](https://github.com/tycronk20/machelix/wiki/Building)
 
 - Vim README: [README_vim.md](README_vim.md)
 
-- [![MacVim GitHub CI](https://github.com/macvim-dev/macvim/actions/workflows/ci-macvim.yaml/badge.svg)](https://github.com/macvim-dev/macvim/actions/workflows/ci-macvim.yaml)
+- [![MacHelix GitHub CI](https://github.com/tycronk20/machelix/actions/workflows/ci-machelix.yaml/badge.svg)](https://github.com/tycronk20/machelix/actions/workflows/ci-machelix.yaml)
 
-- Packaged in [![Homebrew package](https://repology.org/badge/version-for-repo/homebrew/macvim.svg)](https://repology.org/metapackage/macvim/versions) [![MacPorts package](https://repology.org/badge/version-for-repo/macports/macvim.svg)](https://repology.org/metapackage/macvim/versions)
+- Packaged via Homebrew and MacPorts (coming soon)
 

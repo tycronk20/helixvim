@@ -1,4 +1,4 @@
-# Brewfile for HelixVim
+# Brewfile for MacHelix
 
 # Rust toolchain (if not already installed)
 brew "rustup-init"

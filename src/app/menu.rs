@@ -1,4 +1,4 @@
-//! macOS menu implementation for HelixVim
+//! macOS menu implementation for MacHelix
 //!
 //! This module handles the creation and management of native macOS menus.
 
