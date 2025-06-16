@@ -9,9 +9,9 @@ license = "MIT"
 
 [dependencies]
 # Helix core
-helix-core = "0.6.0"
-helix-view = "0.6.0"
-helix-term = "0.6.0"
+helix-core = { git = "https://github.com/helix-editor/helix", tag = "v0.6.0" }
+helix-view = { git = "https://github.com/helix-editor/helix", tag = "v0.6.0" }
+helix-term = { git = "https://github.com/helix-editor/helix", tag = "v0.6.0" }
 
 # macOS integration
 cocoa = "0.24.1"
